@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="inpt1">
+    <input type="text" id="inpt2">
+    <button onclick="muti()">*</button>
+    <div id="table$$">
+
+    </div>
+
+    <script>
+    let inpt1 = document.getElementById("inpt1")
+        let inpt2 = document.getElementById("inpt2")
+        let table = []
+        let table$$ = document.getElementById('table$$')
+        function muti() {
+        
+           if (inpt1.value > inpt2.value){
+              table$$.innerHTML = 'Input one should be lesser than input two'
+           } else {
+            for (let i = inpt1.value; i <= inpt2.value; i++) {
+                for (let j = 1; j <= 12; j++) {
+                    table.push((`${i} * ${j} = ${i * j}`))
+                }
+            }
+            table$$.innerHTML = `<p>${table}</p>`
+           }
+        }
+        </script>
+</body>
+<div>
+</div>
+
+</html>
